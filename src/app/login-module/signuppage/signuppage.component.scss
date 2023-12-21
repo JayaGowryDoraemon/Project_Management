@@ -1,0 +1,76 @@
+.container-fluid{
+    //     // background-image: linear-gradient(to right top, #707b8b, #7787a2, #8093b8, #8a9fd0, #96abe7);
+    //      background-image: linear-gradient(to right top, #3b506f, #50668c, #667ca9, #7d93c8, #96abe7);
+    //    //  background-image: linear-gradient(to right top, #82eec9, #7febd6, #82e7df, #8be2e5, #97dde7);
+    //     // background-image: linear-gradient(to right top, #31f6b2, #00ecc7, #00e0d5, #00d3dd, #21c6de);
+    //     height: 100vh;
+    //     margin-top: 0%;
+    //     padding-top:10%;
+    //     padding-left:40%;
+    //     padding-bottom: 10%;
+        .signupclass{
+            padding-top:15%;
+            padding-bottom: 10%;
+            display:inline-flexbox;
+            max-width: 100%;
+         //   max-width: 100%;
+            
+            
+            .signupcard{
+                 background-color:lightcyan;
+                padding-top:20px;
+                padding-bottom: 20px;
+               
+               border-radius: 150px 10px 10px 150px;
+              //padding-left: 10%;
+              
+            }
+        }
+        
+     }
+    .registerbtn{
+        width: fit-content;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-image: linear-gradient(to right top, #707b8b, #7787a2, #8093b8, #8a9fd0, #96abe7);
+    }
+    .heading{
+        font-size: 35px;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    
+    .left{
+        text-align: center;
+    }
+    
+    .right{
+        text-align: center;
+    }
+    
+    mat-form-field{
+        width: 65%;
+    }
+    // .images{
+    //     // background-image: url("../../../assets/images/signin3.png");
+    //     // background-repeat: no-repeat;
+    //     // background-size: cover;
+    //     // // width: 600px;
+    //     // height: 600px;
+    //     // pa
+    // }
+    .responsive {
+       // padding-top:15%;
+        //    padding-bottom: 10%;
+         
+        max-width: 100%;
+         border-radius: 50%;
+         
+        max-height: 100%;
+      }
+      .imagediv{
+           padding-left: 50px;
+           padding-right: 50px;
+           padding-top:13%;
+      }

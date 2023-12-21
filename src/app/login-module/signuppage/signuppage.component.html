@@ -1,0 +1,83 @@
+<div class="container-fluid">
+    <div class="d-flex col-12 flex-wrap ">
+        <div  class="imagediv col-md-5 "> 
+            <img src="../../../assets/images/signin3.png" class="responsive" >
+        </div>
+        
+        <div class="col-md-7 col-12">
+            <div class="signupclass" >
+       
+                <mat-card class="signupcard">
+                    <form [formGroup]="signupform">
+                        <div class="row">
+                            <div>
+                                <p class="h1 heading">Registration Details</p>
+                            </div>
+                        </div>
+                        <div class="row col-12 ">
+                            <div class="col-6  left">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Name</mat-label>
+                                    <input type="text" matInput formControlName="Name">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row col-12 pt-2">
+                            <div class="col-6  left">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>UserName</mat-label>
+                                    <input type="text" matInput formControlName="UserName">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-6 right">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Email</mat-label>
+                                    <input type="text" matInput formControlName="Email">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row col-12 pt-2">
+                            <div class="col-6 left">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Password</mat-label>
+                                    <input type="password" matInput formControlName="PassWord">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-6 right">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Confirm Password</mat-label>
+                                    <input type="text" matInput formControlName="ConfirmPassword">
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row col-12 pt-2">
+                            <div class="col-6 left">
+                                <mat-form-field appearance="outline">
+                                    <mat-label>Phone Number</mat-label>
+                                    <input type="text" matInput formControlName="PhoneNumber">
+                                </mat-form-field>
+                            </div>
+                            <div class="col-6 right">
+                                <mat-form-field class="width" appearance="outline">
+                                    <mat-label>Role</mat-label>
+                                    <mat-select formControlName="Role">
+                                        <mat-option *ngFor="let roles of rolelist" [value]="roles.value">
+                                            {{roles.viewValue}}
+                                        </mat-option>
+                                    </mat-select>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row pt-2" style="justify-content: center;">
+                            <button mat-raised-button class="registerbtn" (click)="register(signupform)">Register</button>
+                        </div>
+                    </form>
+                </mat-card>
+            </div>
+        </div>
+        <!-- <div class="col-4 images "> -->
+            <!-- <img src="../../../assets/images/signin3.png" alt=""> -->
+        <!-- </div> -->
+    </div>
+    
+</div>

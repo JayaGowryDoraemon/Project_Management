@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row">
+      <div class="d-flex justify-content-center">
+        <h1>Project Details</h1>
+      </div>
+  
+      <form [formGroup]="addproject">
+  
+        <div class="row col-12 padding">
+          <div class="col-6">
+            <mat-form-field appearance="outline" style="width: 250px;">
+              <mat-label>Project Name</mat-label>
+              <input type="text" matInput formControlName="projectName">
+              <mat-error *ngIf="addproject.get('projectName')?.hasError('projectName')">required</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row col-12 padding">
+          <div class="col-6">
+            <mat-form-field appearance="outline">
+              <mat-label>Start Date</mat-label>
+              <input matInput [matDatepicker]="picker" formControlName="startDate" class="a">
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+          <div class="col-6">
+            <mat-form-field appearance="outline">
+              <mat-label>Finish Date</mat-label>
+              <input matInput [matDatepicker]="picker1" formControlName="endDate" class="b"
+                (click)="cals()">
+              <mat-hint>MM/DD/YYYY</mat-hint>
+              <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row col-12 padding">
+          <div class="col-6">
+            <div style="padding-right: 15px; ">
+              <!-- <ng-multiselect-dropdown class="multiselect" [settings]="dropdownSettings" [data]="dropdownList"
+                formControlName="racilists" placeholder="RACI">
+              </ng-multiselect-dropdown> -->
+              <mat-form-field appearance="outline" style="width: 250px;">
+                <mat-label>RACI</mat-label>
+                <mat-select formControlName="raci">
+                  <mat-option *ngFor="let raci of dropdownList" [value]="raci" >
+                    {{raci}}
+                  </mat-option>
+                </mat-select>
+  
+              </mat-form-field>
+              
+            </div>
+  
+          </div>
+          <div class="col-6">
+            <!-- <mat-form-field appearance="outline" style="width: 250px;">
+              <mat-label>Duration</mat-label>
+              <input type="text" formControlName="Duration" matInput [value]="Time">
+            </mat-form-field> -->
+            <button mat-raised-button (click)="cals()" style="width: 250px; height: 35px;">Calculate Duration</button>
+          </div>
+  
+        </div>
+        <div class="row col-12 padding">
+          <div class="col-6 d-flex justify-content-between pt-3">
+            <button *ngIf="!data"  mat-raised-button style="background-color: green; color: white;" [mat-dialog-close]="addproject.value"
+            (click)="createProject(addproject)">Add</button>
+            <button *ngIf="data" mat-raised-button color="primary" [mat-dialog-close]="addproject.value"  (click)="updateProject(addproject) ">Update</button>
+          </div>
+          <div class="col-6 d-flex justify-content-end pt-3">
+            <button mat-raised-button color="warn" [mat-dialog-close]>Cancel</button>
+          </div>
+        </div>
+      </form>
+  
+    </div>
+  </div>

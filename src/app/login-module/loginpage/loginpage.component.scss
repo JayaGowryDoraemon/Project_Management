@@ -1,0 +1,54 @@
+
+.images{
+    background-image: url("../../../assets/images/loginscrren2.png");
+    height: 100vh;
+position: auto;
+background-position: center;
+background-size: cover;
+
+}
+
+.container-fluid {
+    width: 100%;
+}
+.signup{
+    display:inline-block;
+    margin-top: 10%;
+    .icons{
+      text-align: center;
+      padding-bottom: 20px;
+    }
+    .first-heading{
+        
+        text-align: center !important;     
+        justify-content: center;   
+        padding-bottom: 20px;
+    }
+    .heading{
+        font-size: 15px;
+        padding-left: 14px;
+        color: rgb(250, 123, 19);
+        font-weight: 550;
+
+
+    }
+   .forms{
+    padding-top: 10px;
+   }
+   .forget{
+    text-align: end;
+    margin-right: 12px;
+    color: rgb(250, 123, 19);
+    font-weight: 550;
+   }
+   .btn{
+        margin-left: 1px;
+        margin-right: 2px;
+    .signinbtn{
+        
+        width: 96%;
+        background-color: rgb(196, 189, 255);
+       }
+   }
+   
+}

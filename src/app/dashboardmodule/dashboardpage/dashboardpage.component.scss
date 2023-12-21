@@ -1,0 +1,76 @@
+
+
+.matstatus
+{
+    cursor: pointer;
+}
+.chart{
+    height: 250px !important;
+    width: 250px !important;
+}
+.box1{
+    height: 10px;
+    width: 150px;
+    background-color: rgb(170, 237, 237);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.box2{
+    height: 10px;
+    width: 150px;
+    background-color: rgb(138, 169, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.box3{
+    height: 10px;
+    width: 150px;
+    background-color: rgb(255, 126, 216);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.outerbox{
+    margin: 15%;
+}
+.inside{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.card1{
+    background-image: linear-gradient(to right top, #84b5ff, #6e9dec, #5a86d8, #456fc5, #3159b1);
+}
+.card2{
+    background-image: linear-gradient(to right top, #84ffa9, #7cfdac, #74fbb0, #6bf8b3, #63f6b6);
+}
+.card3{
+    background-image: linear-gradient(to right top, #f083a5, #f39dc1, #f4b7d8, #f7d0eb, #fbe8fa);
+}
+.card4{
+    background-image: linear-gradient(to right top, #ffea5f, #f8eb77, #f2eb8d, #edeaa1, #e9e9b5);
+}
+
+.search-box{
+    width: 100%;
+    height: 10vh;
+}
+tr:not(:has(th)):hover{
+
+    background-color: #f5f5f5;
+
+    transform: scale(1.02);
+
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2), -1px -1px 8px rgba(0, 0, 0, 0.2);
+
+}
+
+th{
+
+    background-color: rgb(45, 26, 249) !important;
+
+    color: white;
+
+}
+.container{
+    padding-top: 100px;
+}

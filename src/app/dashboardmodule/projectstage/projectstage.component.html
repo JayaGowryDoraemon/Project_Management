@@ -1,0 +1,56 @@
+
+<div class="container child">
+    <h2>Project Plan Of {{projectDetailsValue.projectName}}</h2>
+    <div class="d-flex justify-content-between">
+      <div class="d-flex align-items-center create">Table of Project Plan</div>  
+      <div>
+        <button mat-raised-button (click)="addprojectstagws(projectDetailsValue.projectName)" class="createbutton">Add Plan</button>
+      </div>
+     
+    </div>
+    
+     
+    <table  mat-table [dataSource]="projectplandatasource">
+      <ng-container matColumnDef="ProjectPlan">
+        <th mat-header-cell *matHeaderCellDef> Project Plan </th>
+        <td mat-cell *matCellDef="let value">
+          <button mat-button (click)="openDevelopment(value.StagesId)">{{value.StagesId}} </button>
+        </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="StartDate">
+        <th mat-header-cell *matHeaderCellDef> Start Date </th>
+        <td mat-cell *matCellDef="let value">{{value.StartDate|date:'longDate'}}</td>
+      </ng-container>
+    
+      <ng-container matColumnDef="FinishedDate">
+        <th mat-header-cell *matHeaderCellDef> Finished Date </th>
+        <td mat-cell *matCellDef="let value">{{value.FinishDate|date:'longDate'}}</td>
+      </ng-container>
+    
+    
+      <ng-container matColumnDef="Duration">
+        <th mat-header-cell *matHeaderCellDef>Duration </th>
+        <td mat-cell *matCellDef="let value">{{value.Duration}}</td>
+      </ng-container>
+    
+    
+    
+      <ng-container matColumnDef="Status">
+        <th mat-header-cell *matHeaderCellDef> Status</th>
+        <td mat-cell *matCellDef="let value">{{value.StatusId}}</td>
+      </ng-container>
+    
+       <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef> Action</th>
+        <td mat-cell *matCellDef="let value">
+          <button mat-icon-button (click)="editPlan(value)"><mat-icon>edit</mat-icon></button>
+        </td>
+      </ng-container>
+    
+      <tr mat-header-row *matHeaderRowDef="cols1"></tr>
+            <tr mat-row *matRowDef="let row; columns: cols1;"></tr>
+    
+    </table>
+  </div> 
+ 

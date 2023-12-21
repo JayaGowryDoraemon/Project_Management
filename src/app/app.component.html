@@ -1,0 +1,37 @@
+<div *ngIf="showbar">
+  <mat-toolbar class="heading">
+    <mat-toolbar-row>
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button> PROJECT MANAGEMENT
+      <span class="toolbar-spacer"></span>
+      <div class="d-flex justify-content-end">
+        <button mat-icon-button [matMenuTriggerFor]="setting">
+          <mat-icon>settings</mat-icon>
+          <mat-menu #setting="matMenu">
+            <button mat-menu-item routerLink="">
+              <mat-icon>logout</mat-icon>logout
+            </button>
+          </mat-menu>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<mat-sidenav-container style="height: 100%;">
+  <mat-sidenav #sidenav mode="side">
+    <img src="../assets/images/download.png" alt="" style="height: 50px; width: 130px; padding-left: 20px; margin-top: 60px;">
+    <button mat-button class="menu-button" routerLink="" (click)="sidenav.toggle()">
+      <mat-icon>person</mat-icon>
+    <span>
+      Create User
+    </span>
+    </button>
+    
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

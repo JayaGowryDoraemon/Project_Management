@@ -1,0 +1,66 @@
+// *{
+//     margin: 0px;
+//     padding: 0px;
+//     box-sizing: border-box;
+// }
+.image{
+    background-image: url("../../../assets/images/homescreen2.jpg");
+    
+    height: 100vh;
+    position: auto;
+    background-position: center;
+    background-size: cover;
+    
+    }
+    .container-fluid{
+        width: 100%;
+    }
+    .heading{
+        padding-top: 40%;
+        padding-left: 20px;
+    }
+    .title{
+        font-size: 50px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    .titleclass{
+        display: flex;
+        gap: 30px;
+    }
+    .sub{
+        font-size: 23px;
+        display: flex;
+        gap:5px;
+        color: rgb(92, 92, 92);
+    }
+    .navbar{
+        margin-left: 45%;
+        .col-2{
+           
+         color: rgb(92, 92, 92);
+         font-weight: 400;
+         font-size: 20px;
+            p{
+                
+                border-style: solid;
+                border-color:rgb(145, 214, 214);
+            }
+        
+        }
+    }
+    .signup{
+        width: fit-content;
+       // padding-left: 25px;
+        padding-top:  30px;
+        .btn{
+            border-radius: 20px;
+            margin-left: 10px;
+            margin-right: 10px;
+            background-color: rgb(145, 214, 214);
+        }
+        
+    }
+    .nav:hover{
+        padding-bottom: 10px;
+        border-bottom: 3px solid rgb(145, 214, 214);
+    }

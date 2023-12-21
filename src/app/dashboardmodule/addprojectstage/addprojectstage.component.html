@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row">
+      <div class="d-flex justify-content-center">
+        <h1>Project Plan Details</h1>
+      </div>
+   
+        <form [formGroup]="projectPlanForm">
+  
+          <div class="row col-12 padding">
+            <div class="col-6">
+              <mat-form-field class="width" appearance="outline">
+                <mat-label>Project Stages</mat-label>
+                <input type="text" matInput formControlName="projectName">
+                <mat-error *ngIf="projectPlanForm.get('projectName')?.hasError('projectName')">required</mat-error>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+            </div>
+    
+          </div>
+          <div class="row col-12 padding">
+            <div class="col-6">
+              <mat-form-field appearance="outline">
+                <mat-label>Start Date</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="StartDate" >
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+              </mat-form-field>
+            </div>
+            <div class="col-6">
+              <mat-form-field appearance="outline">
+                <mat-label>Finish Date</mat-label>
+                <input matInput [matDatepicker]="picker1" formControlName="FinishDate" >
+                <mat-hint>MM/DD/YYYY</mat-hint>
+                <mat-datepicker-toggle matIconSuffix [for]="picker1"></mat-datepicker-toggle>
+                <mat-datepicker #picker1></mat-datepicker>
+              </mat-form-field>
+            </div>
+          </div>
+          
+            
+          
+          <div class="row col-12 padding d-flex justify-content-center">
+            
+          
+              <button mat-raised-button (click)="calculatePlan()" class="width">
+                Calculate Duration
+              </button>
+            
+          </div>
+          <div class="row col-12 padding">
+            <div class="col-6 d-flex justify-content-between">
+              <button mat-raised-button style="background-color: green ; color: white;" mat-raised-button [mat-dialog-close]="projectPlanForm.value"
+              (click)="savePlan(projectPlanForm)">Add</button>
+            <button mat-raised-button color="primary" [mat-dialog-close]="projectPlanForm.value">Update</button>
+            </div>
+            <div class="col-6 d-flex justify-content-end" >
+              <button mat-raised-button color="warn" [mat-dialog-close]>Cancel</button>
+            </div>
+          </div>
+    
+        </form>
+    </div>
+  </div>
